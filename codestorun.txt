@@ -1,0 +1,37 @@
+# Check Python and pip versions
+python --version
+pip --version
+
+# Install required packages
+pip install streamlit
+pip install torch
+pip install pandas
+pip install transformers
+pip install torch-audio 
+pip install accelerate  
+
+# Alternative: Install all at once
+pip install streamlit torch pandas transformers accelerate
+
+# Verify Streamlit installation
+streamlit --version
+
+# If streamlit command not found, try:
+python -m streamlit --version
+
+# Verify the model directory exists and contains required files
+dir NERmodel-3
+
+# Verify the text datasets directory exists
+dir TEXT_DATASETS\04_Kishkindha-kanda
+
+# Create output directories if they don't exist (optional - the app creates them)
+mkdir corrected_json
+mkdir retrain_dataset
+
+venv/Scripts/activate
+streamlit run app.py
+
+# If the above fails, try:
+python -m streamlit run app.py
+

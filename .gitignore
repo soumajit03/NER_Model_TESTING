@@ -1,115 +1,51 @@
-# Model directories and files
+# Ignore everything by default
+*
+
+# But include these specific folders and files
+!TEXT_DATASETS/
+!TEXT_DATASETS/**
+
+!app.py
+!codestorun.txt
+
+!corrected_json/
+!corrected_json/**
+
+# Include .gitignore itself
+!.gitignore
+
+# Include README if you want to add one later
+!README.md
+
+# Exclude model files (these are typically large)
 NERmodel-3/
-*.pkl
-*.bin
-*.safetensors
-*.pt
-*.pth
-*.h5
-*.onnx
+retrain_dataset/
 
-# Remove or comment out these lines if they exist:
-TEXT_DATASETS/
-app.py
-codestorun.txt
-corrected_json/
-
-# Python cache and compiled files
+# Exclude Python cache and virtual environment
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual environments
-.env
-.venv
-env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+env/
+.venv/
+.env/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# PyTorch
-*.pth
-*.pt
-
-# Transformers cache
-.cache/
-transformers_cache/
-.transformers_cache/
-
-# Streamlit
-.streamlit/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Windows
-$RECYCLE.BIN/
-Desktop.ini
-
-# IDE files
+# Exclude IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# Logs
+# Exclude OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Exclude log files
 *.log
-logs/
 
-# Temporary files
+# Exclude temporary files
 *.tmp
 *.temp
-temp/
-tmp/
-
-# Large data files
-*.csv
-*.json
-*.txt
-*.tsv
-
-# Model outputs
-outputs/
-results/
-checkpoints/
-
-# Configuration files with sensitive data
-config.json
-secrets.json
-.env.local
-.env.production
-
-# Backup files
-*.bak
-*.backup
