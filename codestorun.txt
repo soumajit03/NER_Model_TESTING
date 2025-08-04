@@ -35,3 +35,37 @@ streamlit run app.py
 # If the above fails, try:
 python -m streamlit run app.py
 
+# Step 1: Navigate to your project directory
+cd "c:\Users\souma\Downloads\NERFINALproject"
+
+# Step 2: Initialize Git repository
+git init
+
+# Step 3: Add all files (respecting .gitignore)
+git add .
+
+# Step 4: Create initial commit
+git commit -m "Initial commit: NER Final Project"
+
+# Step 5: Create a new repository on GitHub
+# Go to https://github.com/new in your browser
+# Repository name: NERFINALproject (or your preferred name)
+# Set to Public or Private as needed
+# DO NOT initialize with README, .gitignore, or license (since you already have them)
+# Click "Create repository"
+
+# Step 6: Add remote origin (replace YOUR_USERNAME with your GitHub username)
+git remote add origin https://github.com/YOUR_USERNAME/NERFINALproject.git
+
+# Step 7: Push to GitHub
+git branch -M main
+git push -u origin main
+
+# Alternative: If you prefer SSH (requires SSH key setup)
+# git remote add origin git@github.com:YOUR_USERNAME/NERFINALproject.git
+# git push -u origin main
+
+# To verify upload was successful
+git status
+git log --oneline
+
